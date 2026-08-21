@@ -155,13 +155,6 @@ function App() {
             </p>
           </div>
 
-          {/* seal */}
-          <div className="mt-12 flex justify-center">
-            <div className="hanko font-serif flex h-20 w-20 flex-col items-center justify-center rounded-[6px] text-2xl leading-none font-medium tracking-widest text-white select-none">
-              <span>SW</span>
-            </div>
-          </div>
-
           <address className="mt-14 flex flex-col items-center gap-3 text-sm text-ink-soft not-italic sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-6">
             <span>Addis Ababa, Ethiopia</span>
             <span className="hidden text-shu sm:inline">◇</span>
@@ -217,7 +210,7 @@ function App() {
                 key={`${item.company}-${item.title}`}
                 className="group relative"
               >
-                <div className="flex items-baseline justify-between gap-4">
+                <div className="items-baseline space-y-4">
                   <div className="flex items-baseline gap-4">
                     <span className="font-serif text-xl font-medium text-shu select-none">
                       {item.numeral}
@@ -226,24 +219,22 @@ function App() {
                       <h3 className="font-serif text-xl font-medium text-ink">
                         {item.title}
                       </h3>
-                      <p className="mt-0.5 text-sm tracking-[0.15em] text-ink-soft uppercase">
-                        {item.company}
-                        <span className="mx-2 text-ink-faint">·</span>
-                        <span className="normal-case italic">
-                          {item.location}
-                        </span>
-                      </p>
                     </div>
                   </div>
                   <p className="shrink-0 font-mono text-[11px] tracking-widest whitespace-nowrap text-ink-faint">
                     {item.period}
+                  </p>
+                  <p className="mt-0.5 text-sm tracking-[0.15em] text-ink-soft uppercase">
+                    {item.company}
+                    <span className="mx-2 text-ink-faint">·</span>
+                    <span className="normal-case italic">{item.location}</span>
                   </p>
                 </div>
 
                 <ul className="mt-5 space-y-2.5 border-l border-ink/10 pl-9 text-[15px] leading-relaxed text-ink-soft">
                   {item.bullets.map((bullet) => (
                     <li key={bullet} className="relative">
-                      <span className="absolute top-[0.62em] -left-[2.35rem] text-[9px] text-shu select-none">
+                      <span className="absolute top-[0.62em] left-[-2.53rem] text-[9px] text-shu select-none">
                         ◈
                       </span>
                       {bullet}
