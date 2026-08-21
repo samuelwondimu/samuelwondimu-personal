@@ -290,7 +290,6 @@ function App() {
 
         {/* ─── FOOTER ─── */}
         <footer className="mt-28 pb-4 text-center">
-          <div className="enso mx-auto mb-8 h-16 w-16 rounded-full border-[3px] border-ink/70" />
           <p className="text-sm tracking-[0.4em] text-ink-faint uppercase select-none">
             Thank you for reading
           </p>
